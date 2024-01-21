@@ -1,0 +1,69 @@
+
+.welcome-header {
+    margin:90px 0px;
+    text-align:center;
+    /* 하위가 다 text 계열이라 텍스트를 가운데로 몰아줌. */
+    display:flex;
+    /* header-title이 좌측으로 몰아가 가운데로 정렬하도록 움직이려면 flex를 사용하면 title과 text가 연달아 이어지게 됨. 이를 flex-direction:column으로 바꾸어줌. */
+    flex-direction: column;
+    /* flex-direction은 row를 수직으로 변경 */
+    align-items:center;
+    font-weight: 600;
+
+}
+.welcome-header__title {
+    margin-bottom: 40px;
+    font-size: 25px;
+}
+
+.welcome-header__text {
+    width: 60%;
+    opacity: 0.7;
+}
+
+#login-form {
+    display:flex;
+    flex-direction: column;
+    margin: 0px 30px;
+
+}
+
+#login-form input {
+    padding: 15px 0px;
+    border:none;
+    font-size: 18px;
+    margin-bottom: 25px;
+    background-color: var(--newjeans-color2);
+    border-bottom: 1px solid black;
+}
+
+#login-form input:not([type="submit"]) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    transition: border-color 0.3s ease-in-out;
+}
+
+#login-form input::placeholder{
+    color:rgba(0, 0, 0, 0.4);
+}
+
+#login-form input:focus {
+    border-color: var(--newjeans-color);
+}
+
+#login-form input[type="submit"] {
+    background-color: var(--newjeans-color);
+    cursor:progress;
+    font-size: 16px;
+    padding: 20px 0px;
+    border-radius:5px;
+}
+
+#login-form a {
+    text-align: center;
+    text-decoration: none;
+    color:inherit;
+    /* inherit은 아버지로부터 색상을 상속받음. */
+    font-size: 12px;
+    
+}
+
